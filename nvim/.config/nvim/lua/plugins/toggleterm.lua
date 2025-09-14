@@ -4,11 +4,9 @@ return {
     config = function()
         require("toggleterm").setup{
             open_mapping = [[<c-\>]], 
-            size = 20,
-            direction = 'float', -- 'horizontal'
+            size = 17,
+            direction = 'horizontal', -- 'float'
         }
-
-        -- vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
     end
 
 }

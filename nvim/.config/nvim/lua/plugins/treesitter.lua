@@ -6,7 +6,7 @@ return {
     config = function()
         require("nvim-treesitter.configs").setup({
             ensure_installed = { 'bash', 'c', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'python', 'toml', 
-            'gitignore', 'make', 'cmake', 'cpp', 'rust', 'go' },
+            'gitignore', 'make', 'cmake', 'cpp', 'rust', 'go', 'ocaml' },
             -- Autoinstall languages that are not installed
             auto_install = true,
             highlight = { enable = true },

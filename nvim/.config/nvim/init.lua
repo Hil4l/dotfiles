@@ -13,8 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    require 'color_schemes.rosepine',
-
+    require 'plugins.rosepine',
     require 'plugins.minifiles',
     require 'plugins.leap',
     require 'plugins.smear_cursor',
@@ -22,7 +21,6 @@ require('lazy').setup({
     require 'plugins.telescope',
     require 'plugins.harpoon',
     require 'plugins.toggleterm',
-    require 'plugins.lualine',
     require 'plugins.lsp',
 })
 

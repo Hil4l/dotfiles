@@ -19,9 +19,21 @@ return {
             local lspconfig = require("lspconfig")
             local util = require("lspconfig.util")
 
-            lspconfig.clangd.setup({})
+            lspconfig.clangd.setup({
+                cmd = {
+                    "clangd",
+                    "--background-index",
+                    "--clang-tidy",
+                    "--header-insertion=iwyu",
+                    "--completion-style=detailed",
+                    "--function-arg-placeholders",
+                    "--fallback-style=LLVM",
+                }
+            })
             lspconfig.gopls.setup({})
             lspconfig.rust_analyzer.setup({})
+            lspconfig.ocamllsp.setup({})
+
 
             -- LSP functionalities
             local autocmd = vim.api.nvim_create_autocmd

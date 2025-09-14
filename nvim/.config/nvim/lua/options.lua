@@ -3,7 +3,7 @@ vim.opt.clipboard = 'unnamedplus' -- sync OS and vim clipboard
 
 -- line display
 vim.opt.nu = true
-vim.opt.wrap = false -- display lines as one ling line (dont break it when exceed window width)
+vim.opt.wrap = false -- display lines as one long line (dont break it)
 vim.opt.linebreak = true -- dont split words
 
 -- indentation
@@ -17,8 +17,7 @@ vim.opt.incsearch = true -- highlighted pattern so far when searching
 -- vim.opt.hlsearch = false -- dont highlight all matching patterns when searching
 
 vim.opt.termguicolors = true
-vim.opt.colorcolumn = "80"
-
+-- vim.opt.colorcolumn = "80"
 
 
 
