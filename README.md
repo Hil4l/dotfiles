@@ -3,5 +3,3 @@
 
 ### unstow a config
 `stow -D [config_dir]`
-
-(default target dir is parent dir)

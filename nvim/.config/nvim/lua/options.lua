@@ -36,9 +36,3 @@ vim.opt.termguicolors = true
 
 
 
-
-
-
-
-
-

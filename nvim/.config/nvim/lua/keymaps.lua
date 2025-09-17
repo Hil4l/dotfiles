@@ -25,3 +25,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- past over word without loosing buffer (put pasted over word in void register)
 vim.keymap.set('x', '<leader>p', '"_dP')
 vim.keymap.set('n', 'x', '"_x') -- delete without saving to buffer
+
+-- escape terminal mode
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")

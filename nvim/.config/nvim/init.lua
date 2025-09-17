@@ -1,5 +1,6 @@
 require 'keymaps'
 require 'options'
+require 'autocmds'
 
 -- Lazy install/setup
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -13,7 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    require 'plugins.rosepine',
+    -- require 'plugins.rosepine',
     require 'plugins.minifiles',
     require 'plugins.leap',
     require 'plugins.smear_cursor',
@@ -24,4 +25,4 @@ require('lazy').setup({
     require 'plugins.lsp',
 })
 
-
+vim.cmd('colorscheme mycolorscheme')

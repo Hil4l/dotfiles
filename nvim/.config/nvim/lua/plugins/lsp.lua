@@ -30,37 +30,12 @@ return {
                     "--fallback-style=LLVM",
                 }
             })
+            lspconfig.ruff.setup({})
             lspconfig.gopls.setup({})
             lspconfig.rust_analyzer.setup({})
-            lspconfig.ocamllsp.setup({})
+            -- lspconfig.ocamllsp.setup({})
 
 
-            -- LSP functionalities
-            local autocmd = vim.api.nvim_create_autocmd
-            autocmd('LspAttach', {
-                callback = function(args)
-
-                    -- LSP keymaps
-                    local opts = { buffer = args.buf }
-                    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-                    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-                    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-
-                    -- Autoformat on save
-                    local client = vim.lsp.get_client_by_id(args.data.client_id)
-                    if not client then return end
-                    if client.supports_method('textDocument/formatting', 0) then
-                        -- format buffer on save
-                        autocmd('BufWritePre', {
-                            buffer = args.buf,
-                            callback = function()
-                                vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
-                            end,
-                        })
-                    end
-
-                end,
-            })
 
             -- diagnostics display
             vim.diagnostic.config({
