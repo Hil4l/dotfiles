@@ -1,6 +1,6 @@
 require 'keymaps'
 require 'options'
-require 'autocmds'
+-- require 'autocmds'
 
 -- Lazy install/setup
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -14,15 +14,20 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    -- require 'plugins.rosepine',
-    require 'plugins.minifiles',
-    require 'plugins.leap',
-    require 'plugins.smear_cursor',
-    require 'plugins.treesitter',
-    require 'plugins.telescope',
-    require 'plugins.harpoon',
-    require 'plugins.toggleterm',
-    require 'plugins.lsp',
+	require 'plugins/minifiles',
+	require 'plugins/treesitter',
+	require 'plugins/toggleterm',
+	require 'plugins/lsp',
 })
 
+-- colorscheme
 vim.cmd('colorscheme mycolorscheme')
+
+-- blink on yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+    callback = function()
+        vim.highlight.on_yank({
+            timeout=200,
+        })
+    end,
+})

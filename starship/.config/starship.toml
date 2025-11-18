@@ -19,16 +19,11 @@ truncation_symbol = '…/'
 truncate_to_repo = false
 
 [git_branch]
-format = 'on [$symbol\($branch\)]($style) '	
-symbol = ''
+format = 'on [$branch]($style) '	
+# symbol = ''
 style = 'bold purple'
 
 [git_status]
 format = '[$all_status$ahead_behind]($style)'
 
-# add eval "$(starship init bash)" to bash.rc file !
-
-# [cmd_duration]
-# style = 'grey'
-# min_time = 500
-# format = '[$duration]($style)'
+# add eval "$(starship init bash)" to bash.rc file

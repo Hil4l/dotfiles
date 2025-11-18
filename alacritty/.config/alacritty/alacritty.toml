@@ -1,0 +1,19 @@
+[general]
+import = []
+working_directory = "~/hilal/"
+live_config_reload = true
+
+
+[window]
+dimensions = {columns = 140 , lines = 40}
+#position = {x = 10000 , y = 3000}
+
+[font]
+size = 14
+
+[keyboard]
+bindings = [
+    { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+    { key = "K", mode = "~Vi",  mods = "Alt", action = "ToggleViMode" },
+    { key = "Escape", mode = "Vi", action = "ToggleViMode" },
+]

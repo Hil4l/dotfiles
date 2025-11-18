@@ -26,16 +26,4 @@ autocmd('LspAttach', {
     end,
 })
 
--- Highlight when yanking
-autocmd('TextYankPost', {
-    desc = 'Highlight when yanking text',
-    callback = function()
-        vim.highlight.on_yank({
-            timeout=200,
-        })
-    end,
-})
-
-
-
 
