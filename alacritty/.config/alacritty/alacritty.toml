@@ -1,6 +1,6 @@
 [general]
 import = []
-working_directory = "~/hilal/"
+working_directory = "hilal"
 live_config_reload = true
 
 
