@@ -17,7 +17,7 @@ vim.opt.incsearch = true -- incremental highlighting when searching
 -- vim.opt.hlsearch = false -- highlight all matching patterns when searching
 
 vim.opt.termguicolors = true
-vim.opt.colorcolumn = "100"
+-- vim.opt.colorcolumn = "100"
 
 
 

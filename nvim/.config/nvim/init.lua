@@ -1,9 +1,9 @@
 require('keymaps')
 require('options')
 require('lsp')
-require ('plugins')
+require('plugins')
 
-vim.cmd('colorscheme hil4l_red_yellow')
+vim.cmd('colorscheme theme')
 
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function() vim.highlight.on_yank({

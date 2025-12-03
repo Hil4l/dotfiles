@@ -1,5 +1,5 @@
 ### simlink a config
-`stow [config_dir]`
+`stow dir`
 
-### unstow a config
-`stow -D [config_dir]`
+### remove a config
+`stow -D dir`

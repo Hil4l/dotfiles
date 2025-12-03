@@ -1,21 +1,14 @@
-# ==========================
-# Prompt
-# ==========================
-
 format="""
 $directory\
 $git_branch\
 $ocaml\
 $python\
-$git_status
 $character"""
 
 [character] 
 success_symbol = '[➜](bold green)' 
 
-# ==========================
-# Dir
-# ==========================
+# ========== Dir ========== 
 
 [directory]
 truncation_length = 3
@@ -23,21 +16,14 @@ truncation_symbol = '…/'
 truncate_to_repo = false
 format = '[$path ]($style)'
 
-# ==========================
-# Git
-# ==========================
+# ========== Git ========== 
 
 [git_branch]
 style = 'bold purple'
 format = '\([$branch]($style)\)'
 ignore_branches = ['master', 'main']
 
-[git_status]
-format = '[$all_status$ahead_behind]($style)'
-
-# ==========================
-# Languages
-# ==========================
+# ========== Languages ========== 
 
 [ocaml]
 style = 'bold yellow'
@@ -46,6 +32,5 @@ format = '[\($switch_indicator$switch_name\)]($style)'
 [python]
 style = 'bold white'
 format = '[\($virtualenv\)]($style) '
-
 
 # (add eval "$(starship init bash)" to bash.rc file)

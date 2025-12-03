@@ -1,6 +1,6 @@
 -- leader key
 vim.g.mapleader = ' '
-vim.keymap.set({'n', 'v'}, '<Space>', '<Nop>', {silent=true}) -- disable space default behavior - silent to not show it in cmd' line
+vim.keymap.set({'n', 'v'}, '<Space>', '<Nop>', {silent=true})
 
 -- stay in indent mode
 vim.keymap.set('v', '<', '<gv')
