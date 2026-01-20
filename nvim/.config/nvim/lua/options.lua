@@ -1,38 +1,30 @@
-vim.opt.relativenumber = true
-vim.opt.clipboard = 'unnamedplus' -- sync OS and vim clipboard
+vim.opt.termguicolors = true
+vim.opt.colorcolumn = "100"
+vim.opt.swapfile = false
+vim.opt.mouse = 'a'
+-- vim.opt.clipboard = 'unnamedplus' -- use system clipboard
+vim.opt.scrolloff = 10
 
 -- line display
-vim.opt.nu = true
-vim.opt.wrap = false
+vim.opt.nu = true           
+vim.opt.relativenumber = true     
+vim.opt.wrap = false            -- dont wrap lines
 vim.opt.linebreak = true
 
 -- indentation
-vim.opt.shiftwidth = 4 -- indentation = 4 spaces (default=8) 
-vim.opt.tabstop = 4 -- tab = 4 spaces
-vim.opt.expandtab = true -- convert tabs to spaces
+vim.opt.shiftwidth = 4      -- auto indentation width 
+vim.opt.tabstop = 4         -- tab width
+vim.opt.expandtab = true    -- convert tabs to spaces
+vim.opt.smartindent = true  
+vim.opt.autoindent = true
 
-vim.opt.swapfile = false 
+-- search
+vim.opt.incsearch = true    -- incremental highlighting
+vim.opt.ignorecase = true;  -- case insensitive
+vim.opt.smartcase = true;   -- case sensitive if use uppercase
 
-vim.opt.incsearch = true -- incremental highlighting when searching
--- vim.opt.hlsearch = false -- highlight all matching patterns when searching
+-- split defaults
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
-vim.opt.termguicolors = true
--- vim.opt.colorcolumn = "100"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+vim.opt.statusline = "%f %l:%c %= %p%%"

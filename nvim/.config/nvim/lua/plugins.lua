@@ -1,26 +1,37 @@
 vim.pack.add {
-	'https://github.com/stevearc/oil.nvim',
-	'https://github.com/nvim-mini/mini.pick',
-	'https://github.com/nvim-tree/nvim-web-devicons',
-	'https://github.com/akinsho/toggleterm.nvim',
-	'https://github.com/neovim/nvim-lspconfig',
+    'https://github.com/nvim-mini/mini.files',
+    'https://github.com/ibhagwan/fzf-lua',
+    'https://github.com/nvim-tree/nvim-web-devicons',
+    'https://github.com/nvim-treesitter/nvim-treesitter',
+    'https://github.com/akinsho/toggleterm.nvim',
 }
 
--- ========== mini files ==========
-require("oil").setup({
-	columns = {"icon"},
-  view_options = {show_hidden = false},
-}) 
-vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>")
+-- mini.files
+require('mini.files').setup{
+    mappings = { 
+        go_in = 'L', go_in_plus = 'l',
+        go_out = 'H', go_out_plus = 'h',
+        synchronize = '<CR>'
+    },
+}
 
--- ========== mini pick ==========
-require('mini.pick').setup{version = false}
-vim.keymap.set("n", "<leader>f", ":Pick files<CR>")
-vim.keymap.set("n", "<leader>g", ":Pick grep_live<CR>")
+vim.keymap.set("n", "<leader>e",
+    function() require("mini.files").open(vim.api.nvim_buf_get_name(0), true) end
+)
 
--- ========== toggleterm ==========
- require('toggleterm').setup{
-	open_mapping = [[<c -\>]], 
-	size = 17,
-	direction = 'horizontal'
+-- toggleterm
+require('toggleterm').setup{ open_mapping = [[<c-\>]], size = 17, direction = 'horizontal' }
+
+-- fzflua
+require("fzf-lua").setup{
+    defaults = { previewer = false },
+    winopts = { height = 0.50, width = 0.50 },
+}
+vim.keymap.set("n", "<leader>ff", "<Cmd>FzfLua files<CR>")
+vim.keymap.set("n", "<leader>fg", "<Cmd>FzfLua grep_curbuf<CR>")
+
+-- treesitter
+require('nvim-treesitter.configs').setup{
+    lazy = false, auto_install = false, build = ':TSUpdate',
+    highlight = { enable = true }
 }

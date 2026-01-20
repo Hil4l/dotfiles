@@ -21,7 +21,7 @@ format = '[$path ]($style)'
 [git_branch]
 style = 'bold purple'
 format = '\([$branch]($style)\)'
-ignore_branches = ['master', 'main']
+# ignore_branches = ['master', 'main']
 
 # ========== Languages ========== 
 
