@@ -12,8 +12,8 @@ vim.opt.wrap = false            -- dont wrap lines
 vim.opt.linebreak = true
 
 -- indentation
-vim.opt.shiftwidth = 4      -- auto indentation width 
-vim.opt.tabstop = 4         -- tab width
+vim.opt.shiftwidth = 2      -- auto indentation width 
+vim.opt.tabstop = 2         -- tab width
 vim.opt.expandtab = true    -- convert tabs to spaces
 vim.opt.smartindent = true  
 vim.opt.autoindent = true
