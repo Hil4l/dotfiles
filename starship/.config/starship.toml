@@ -21,7 +21,6 @@ format = '[$path ]($style)'
 [git_branch]
 style = 'bold purple'
 format = '\([$branch]($style)\)'
-# ignore_branches = ['master', 'main']
 
 # ========== Languages ========== 
 
@@ -32,5 +31,3 @@ format = '[\($switch_indicator$switch_name\)]($style)'
 [python]
 style = 'bold white'
 format = '[\($virtualenv\)]($style) '
-
-# (add eval "$(starship init bash)" to bash.rc file)

@@ -1,2 +1,2 @@
-vim.opt_local.makeprg = "python3.14" -- uv run
+vim.opt_local.makeprg = "python3" -- uv run
 

@@ -8,7 +8,7 @@ vim.lsp.config['pyrefly'] = {
 }
 
 vim.lsp.config['clangd'] = {
-    cmd = { "clangd", "--background-index", "--clang-tidy", "--query-driver=/usr/bin/g++" },
+    cmd = { "clangd", "--background-index", "--clang-tidy", "--query-driver=/usr/bin/clang++-20" },
     filetypes = { 'cpp', 'c' },
     root_markers = { { '.clang-format', 'Makefile', 'build.sh' }, '.git' },
 }

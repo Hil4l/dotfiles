@@ -3,3 +3,5 @@ theme = Batman
 cursor-color = #87877e
 
 font-size = 15
+window-width = 130
+window-height = 40
